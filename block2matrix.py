@@ -7,7 +7,7 @@ for r in range(i+1):
         print(str(matrix[r][c]).ljust(3), end = '')
     print()"""
 
-n, m = int(input()), int(input()) # Ввод кол-ва строк и столбцов
+"""n, m = int(input()), int(input()) # Ввод кол-ва строк и столбцов
 matrix = [input().split() for i in range(n)] # Перевод поданной матрицы в список матричный
 indexmaxstr = max([int(matrix[r][c]) for r in range(n) for c in range(m)]) # Нахождение макс эл-та во всей матрице
 list2max = [] # Список для максимальных эл-ов у каждой строки
@@ -18,4 +18,15 @@ for r in matrix:
     list2max.append(max(list1)) # Добавление максимальных эл-ов в список
 maxstr = list2max.index(indexmaxstr) # Индекс строки
 maxstolb = matrix[maxstr].index(str(indexmaxstr)) # Идекс столбца
-print(maxstr, maxstolb)
+print(maxstr, maxstolb)"""
+
+n, m = int(input()), int(input()) # Строки, столбцы
+matrix = [input().split() for _ in range(n)] # матрица в списке
+ij = [int(i) for i in input().split()] # номера  столбцов для
+i, j = ij[0], ij[1]
+for s in matrix: # Обмен столбцов
+    s[i], s[j] = s[j], s[i]
+for r in range(n): # Вывод матрицы
+    for c in range(m):
+        print(matrix[r][c], end = ' ')
+    print()
