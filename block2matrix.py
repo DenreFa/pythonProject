@@ -39,8 +39,18 @@ for row in matrix:
     print(*row)
 """
 
-s1 = int(input())
+"""s1 = int(input())
 matrix = [input().split() for _ in range(s1)]
 list1 = matrix[::-1]
 for row in list1:
-    print(*row)
+    print(*row)"""
+
+s1 = int(input())
+matrix = [input().split() for i in range(s1)]
+for r in range(s1):
+    list1 = []
+    for c in range(s1):
+        list1.append(matrix[s1-c-1][r])
+    print(*list1)
+
+
