@@ -20,7 +20,7 @@ maxstr = list2max.index(indexmaxstr) # Индекс строки
 maxstolb = matrix[maxstr].index(str(indexmaxstr)) # Идекс столбца
 print(maxstr, maxstolb)"""
 
-n, m = int(input()), int(input()) # Строки, столбцы
+"""n, m = int(input()), int(input()) # Строки, столбцы
 matrix = [input().split() for _ in range(n)] # матрица в списке
 ij = [int(i) for i in input().split()] # номера  столбцов для
 i, j = ij[0], ij[1]
@@ -29,4 +29,11 @@ for s in matrix: # Обмен столбцов
 for r in range(n): # Вывод матрицы
     for c in range(m):
         print(matrix[r][c], end = ' ')
-    print()
+    print()"""
+
+s1 = int(input())
+matrix = [input().split() for _ in range(s1)]
+for i in range(s1):
+        matrix[i][i], matrix[s1-1-i][i] = matrix[s1-1-i][i], matrix[i][i]
+for row in matrix:
+    print(*row)
