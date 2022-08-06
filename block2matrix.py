@@ -31,9 +31,16 @@ for r in range(n): # Вывод матрицы
         print(matrix[r][c], end = ' ')
     print()"""
 
-s1 = int(input())
+"""s1 = int(input())
 matrix = [input().split() for _ in range(s1)]
 for i in range(s1):
         matrix[i][i], matrix[s1-1-i][i] = matrix[s1-1-i][i], matrix[i][i]
 for row in matrix:
+    print(*row)
+"""
+
+s1 = int(input())
+matrix = [input().split() for _ in range(s1)]
+list1 = matrix[::-1]
+for row in list1:
     print(*row)
